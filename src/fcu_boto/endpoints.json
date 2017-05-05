@@ -1,0 +1,114 @@
+{
+  "partitions": [
+    {
+      "defaults": {
+        "hostname": "{service}.{region}.{dnsSuffix}",
+        "protocols": [
+          "https"
+        ],
+        "signatureVersions": [
+          "v4"
+        ]
+      },
+      "dnsSuffix": "outscale.com",
+      "partition": "osc",
+      "partitionName": "Outscale Standard",
+      "regionRegex": "^(us|eu|cn)\\-\\w+\\-\\d+$",
+      "regions": {
+        "cn-southeast-1": {
+          "description": "Asia Pacific (Hong-Kong Sha Tin, China)"
+        },
+        "eu-west-2": {
+          "description": "EU (Paris-Pantin & Magny-les-Hameaux, France)"
+        },
+        "us-west-1": {
+          "description": "US East (San Jose, California, U.S.A.)"
+        },
+        "us-east-2": {
+          "description": "US East (Clifton & Secaucus, New Jersey, U.S.A.)"
+        }
+      },
+      "services": {
+        "fcu": {
+          "defaults": {
+            "protocols": [
+              "http",
+              "https"
+            ]
+          },
+          "endpoints": {
+            "cn-southeast-1": {},
+            "eu-west-2": {},
+            "us-west-1": {},
+            "us-east-2": {}
+          }
+        },
+        "lbu": {
+          "endpoints": {
+            "cn-southeast-1": {},
+            "eu-west-2": {},
+            "us-west-1": {},
+            "us-east-2": {}
+          }
+        },
+        "dl": {
+          "endpoints": {
+            "cn-southeast-1": {},
+            "eu-west-2": {},
+            "us-west-1": {},
+            "us-east-2": {}
+          }
+        },
+        "eim": {
+          "endpoints": {
+            "aws-global": {
+              "credentialScope": {
+                "region": "us-east-1"
+              },
+              "hostname": "iam.amazonaws.com"
+            }
+          },
+          "isRegionalized": false,
+          "partitionEndpoint": "aws-global"
+        },
+        "osu": {
+          "defaults": {
+            "protocols": [
+              "http",
+              "https"
+            ],
+            "signatureVersions": [
+              "s3v4"
+            ]
+          },
+          "endpoints": {
+            "cn-southeast-1": {
+              "hostname": "osu.cn-southeast-1.outscale.hk",
+              "signatureVersions": [
+                "s3",
+                "s3v4"
+              ]
+            },
+            "eu-west-2": {
+              "hostname": "osu.eu-west-2.outscale.com",
+              "signatureVersions": [
+                "s3",
+                "s3v4"
+              ]
+            },
+            "us-east-2": {
+              "hostname": "osu.us-east-2.outscale.com",
+              "signatureVersions": [
+                "s3",
+                "s3v4"
+              ]
+            }
+          },
+          "isRegionalized": true,
+          "partitionEndpoint": "us-east-1"
+        }
+      }
+    }
+  ],
+  "version": 3
+}
