@@ -1,12 +1,12 @@
 # fcu_boto
-This is a fork of the boto project refactored to work out of the box in the Outscale Cloud Platform
-It's a Quick refactor, that allow using any library that needs boto to connect by default to the Outscale Cloud Platform.
+This is a fork of the [boto](https://github.com/boto/boto) project refactored to work out of the box in the [Outscale Cloud Platform](https://outscale.com)
+It's a Quick refactor, that allow using any library that needs [boto](https://github.com/boto/boto) to connect by default to the [Outscale Cloud Platform](https://outscale.com)
 
-There is a more elegant way to do it (and i will provide it soon), without the need to refactor the whole boto lib,
-but I needed a Quick way to use boto on Ansible and as a newbie to boto, this is the fasted way I've found to do it !!
+There is a more elegant way to do it (and i will provide it soon), without the need to refactor the whole [boto](https://github.com/boto/boto) lib,
+but I needed a Quick way to use [boto](https://github.com/boto/boto) on Ansible and as a newbie to [boto](https://github.com/boto/boto), this is the fasted way I've found to do it !!
 I give it here as it is, maybe someone will find it useful.
 
-Notice that it does not follow any rules in the boto's CONTRIBUTING guideline, there's no warranties of any kind, no comment in the code, and
+Notice that it does not follow any rules in the [boto's CONTRIBUTING guideline](https://github.com/boto/boto/blob/develop/CONTRIBUTING), there's no warranties of any kind, no comment in the code, and
 it's not just a contributing but a total refactoring that has been done using my good old grep and sed freinds.
 
 !!! SO USE IT AT YOUR OWN RISK !!!
@@ -65,4 +65,4 @@ session = fcu_boto.connect_ec2()
 session.get_all_instances()
 ```
 
-Coming soon how to use this with Ansible (which is BTW the main reason i've done this)
+Coming soon how to use this with [Ansible](https://github.com/ansible/ansible) (which is BTW the main reason i've done this)
